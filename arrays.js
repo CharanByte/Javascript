@@ -6,7 +6,8 @@ names[1]='charan'
 console.log(typeof names);
 console.log(names);
 
-
+let a=new Array(3,'charan');
+console.log(a);
 
 let data=[2,'ram',20];
 data.push(25)
@@ -25,4 +26,5 @@ let data1=[5,'cha',{name:'raju'},function(){console.log("hi")
 
 data1[3]()
 console.log(data1[2].name);
+
 

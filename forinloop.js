@@ -16,3 +16,6 @@ let laptop={
     console.log(key,laptop.location[key]);
     
   }
+
+ 
+  

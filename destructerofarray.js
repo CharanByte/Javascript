@@ -1,13 +1,13 @@
 let nums=[2,5,6,7];
-// let [a,b,c,d]=nums;
-// console.log(nums);
-// console.log(a,b,c,d);
+//let [a,b,c,d]=nums;
+console.log(nums);
+console.log(a,b,c,d);
 
 
-// let x=2;
-// let y=4;
-// [p,q]=[x,y];
-// console.log(p,q);
+//let x=2;
+let y=4;
+[p,q]=[x,y];
+console.log(p,q);
 
 [x,y]=[y,x];
 console.log(x,y);

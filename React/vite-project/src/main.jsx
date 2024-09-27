@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom";
 import App from "./components/App";
+import Card from "./React  Props/temp"
 
 
 // let sty={
@@ -19,5 +20,7 @@ import App from "./components/App";
 
 
 ReactDom.render(<div>
- <App></App>
+  <App></App>
+  <Card name="charan"/>
+
 </div>,document.getElementById("root"));

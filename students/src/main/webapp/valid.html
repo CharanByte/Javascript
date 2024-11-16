@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form action="valid" method="post">
+<pre>
+<span id="invaldname"></span>
+Name<input type="text" id="name" name="name" onblur="onKeypress(event)">
+<span id="invaldemail"></span>
+Email<input type="text" id="email" name="email" onblur="onKeypress(event)">
+<span id="invaldpassword"></span>
+password<input type="text" id="password" name="password"
+				onblur="onKeypress(event)">
+Age<input type="text" id="age" name="age" onblur="onKeypress(event)"> 
+Phone No<input type="text" id="no" name="phone"
+				onblur="onKeypress(event)">
+<input type="submit"  disabled value="Submit" id="button">
+
+
+</pre>
+	</form>
+	<script>
+
+	var valid={};
+const onKeypress=(event)=>{
+	
+	
+	const {name,value}=event.target;
+	console.log(value);
+	console.log(name);
+	
+	if(name==="name" && value.length<5){
+		console.log("name invalid")
+	document.getElementById("invaldname").innerHTML="<span style='color:red'>invalid name</span>"
+	}
+	else if(name==="name" && value.length>=5){
+	console.log("name valid");
+	document.getElementById("invaldname").innerHTML="<span style='color:green'>valid name</span>"
+	}
+	
+	if(name==="email" &&( !value.includes("@") || !value.includes("gmail.com"))){
+		console.log("email invalid")
+		document.getElementById("invaldemail").innerHTML="<span style='color:red'>invalid email</span>"
+	}
+	else if(name==="email" && value.includes("@") && value.includes("gmail.com")){
+		console.log("email valid");
+		document.getElementById("invaldemail").innerHTML="<span style='color:green'>valid email</span>"
+		
+	}
+	
+	if(name==="password" && value.length<5){
+		console.log("password invalid")
+		document.getElementById("invaldpassword").innerHTML="<span style='color:red'>invalid password</span>"
+	}
+	else if(name==="password" && value.length>=5){
+		console.log("email valid");
+		document.getElementById("invaldpassword").innerHTML="<span style='color:green'>valid password</span>"
+		
+	}
+		
+		
+	valid={...valid,[name]:value};
+	
+	console.log(valid);
+	let buttonDes=document.getElementById("button");
+	
+	if(Object.keys(valid).length===1){
+		buttonDes.removeAttribute("disabled");
+	}
+  	
+}
+
+
+</script>
+</body>
+</html>

@@ -9,9 +9,9 @@
 <body>
 <form action="form">
 <pre>
-Name<input type="text" id="name" onchange="onPressname()">
+Name<input type="text" id="name" onblur="onPressname(event)" name="fullname">
 Address<input type="text" id="address" onchange="onPressEmail()">
-Age<input type="text" id="age" onchange="onPressage()">
+Age<input type="text" id="age" name="age" onblur="onPressname(event)">
 Qualification<select id="qualification" onchange="onPressQualification()">
 
 <option>select</option>
@@ -31,6 +31,7 @@ college<input type="text" id="college" onkeypress="onpresscollege()">
 <h3 id="show4"></h3>
 <h3 id="show5"></h3>
 <h3 id="show6"></h3>
+
 <script type="text/javascript" src="index1.js"></script>
 
 

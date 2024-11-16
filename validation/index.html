@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vlidation</title>
+</head>
+<body>
+    <form method="post">
+    <pre>
+<input type="text" name="fullname" placeholder="Enter name" onblur="validation(event)" required>
+<input type="email" required placeholder="Enter Email" name="email" onblur="validation(event)">
+<input type="number" required placeholder="Enter password" name="password" onblur="validation(event)">
+<button type="submit" id="button" disabled>Login</button>
+
+    </pre>
+
+
+    </form>
+    <script src="./valid.js"></script>
+</body>
+</html>
